@@ -63,39 +63,22 @@ completeToDo(){
 function buildToDo(todo, index) {//"todo" sería un objeto de la clase constructora.
      // Tu código acá:
   
-
-  const toDoShell= document.createElement("div");// se crea un elemento div
-  toDoShell.className= toDoShell;//se le asigna la clase toDoShell con método del objeto .className 
-  const toDoText = document.createElement("span");//Se crea el elemento span.
-  toDoText.innerHTML=todo.description;//Se le asigna la descripicon pasada por parametro al span.
-  toDoText.id=index;//asigno el parametro pasado por index comoel id del span toDoText.
-  if(complete===true){toDoText.className="completeText"};//si complete es verdadero asignarle a toDoText la clase completeText
-  toDoShell.appendChild(toDoText);//le agregamos a el div toDoShell el hijo toDoShell
-  return toDoShell; //
-  
-
-  /*
-  var toDoShell = document.createElement('div');//creamos un elemento con le metodo createElement y se lo asignamos a la variable toDoShell Shell 
-  toDoShell.className = 'toDoShell';//Le agregamos a la variable toDoShell la clase toDoShell por medio de dot notation y la propiedad className.
-  var toDoText = document.createElement('span');//creamos una variable toDoText a la cual le vamos a asingmar ocmo valor el elemento html "span"
-  toDoText.innerHTML = todo.description;//seteamos el texto que está dentro de la variable toDoText mediante el metodo unner html que cambia o establece nuevo texto. El texto a insertar será definid por la instancia de la clase constructora ToDO y su parametro descripcion.
-  //toDoText.setAttribute('id', index);//Esta es otra manera de hacerlo
-  toDoText.id=index//Si no hago esta linea igual pasa el codigo
-  if(ToDo.complete === true) {//Si la propiedad (atributo) complete en el objeto de la clase ToDo es true entramos en el if
-    toDoText.className = 'completeText';//Y asignamos el nombre de la clase completeText a toDoText 
+  let toDoShell= document.createElement("div");
+  toDoShell.className= "toDoShell";
+  let toDoText = document.createElement("span");
+  toDoText.innerHTML=todo.description;
+  toDoText.id=index;
+  if(todo.complete===true){toDoText.className="completeText"};
+  toDoShell.appendChild(toDoText);
+  return toDoShell; 
   }
-  toDoShell.appendChild(toDoText);//agregar a la variable toDoShell un nodo hijo que es la variable toDoText.
-  return toDoShell; //retorna toDOShell
-  */
-
-}
 
 // La función 'buildToDos' debe crear un array de objetos toDo y devolverlo//ok
 // Recibirá como parámetro un array de objetos ToDo//ok
 // Utilizar el método map usando la función previamente creada ('buildToDo')
 // Devolver el nuevo array
 
-function buildToDos(toDos) {//Esta funcion construye la lista en forma de array de las cosas por hacer. Recibe un array y lo recorremos con map
+function buildToDos(toDos) {
   // Tu código acá:
 
   return toDos.map(function (item, idx) {
@@ -197,9 +180,8 @@ function completeToDo(event) {
  
   const index = event.target.id;//linea descomentada que se encarga de ejecutar varias funciones mencionadas arriba
   // Tu código acá:
-  ToDoItems[index].completeToDo();//Con bracket notation por ser una varable que pasaremos por parametro del constructor ToDo ejecutamos el metodo toDo
+  toDoItems[index].completeToDo();//Con bracket notation por ser una varable que pasaremos por parametro del constructor ToDo ejecutamos el metodo toDo
   displayToDos();//Desplegamos la lista de toDo
-
 
 }
 
