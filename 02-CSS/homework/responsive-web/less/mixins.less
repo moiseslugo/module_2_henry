@@ -1,1 +1,20 @@
 // Mixins acá
+@import "variables";
+
+.body-background{
+    background-color:#fff000;
+    }
+
+.background-changed{
+   .body-background();
+   
+   }
+
+.boton-primario(@river-bend, @ancho-botones){
+    color: @color;
+    width: @ancho;
+}
+img {
+    border-radius: 50px;
+}
+

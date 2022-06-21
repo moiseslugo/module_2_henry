@@ -1,5 +1,9 @@
+.Ocultar{
+  display: none;
+}
 .App {
   text-align: center;
+  
 }
 
 .App-logo {

@@ -1,0 +1,39 @@
+h1{
+    color: blue;
+}
+.container{
+    background-color:lightgreen;
+    border: solid 1px;
+    border-color: blue;
+    border-radius: 0px 15px 0px 15px;
+    width: 25%;
+    height: auto;
+    color: whitesmoke;
+    margin: 10px;
+
+}
+
+.btn{
+    color: white;
+    border: solid  5px;
+    border-radius: 0px 15px 0px 0px;
+    background-color:blue;
+    width: 10 em;
+    margin: 5px;
+    
+}
+.exit{
+   text-align: right;
+}
+.data{
+   color: violet;
+   
+
+   
+}
+.ciudad{
+    margin-bottom:10px;
+}
+   
+    
+     

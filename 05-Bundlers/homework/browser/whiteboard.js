@@ -1,7 +1,10 @@
-(function () {
 
-  window.whiteboard = new window.EventEmitter();
 
+  //window.whiteboard = new window.EventEmitter(); creamos ahora el requiere
+  
+  const EventEmitter = requiere("./event-emitter.js")//solicitamos event-emitter con su respectivo path
+  let whiteboard= new EventEmitter();//creamos nueva instancia de EventEmitter;
+  
   // Ultimately, the color of our stroke;
   var color;
 
@@ -113,4 +116,4 @@
 
   };
 
-})();
+

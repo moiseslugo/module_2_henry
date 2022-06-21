@@ -1,0 +1,28 @@
+.container{
+    background-color:greenyellow;
+    
+    color:blue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    margin: 20px;
+    padding: 15px;
+
+  
+}
+
+.buscar{
+    font-size:medium;
+    align-items: center;
+    border: none;
+    background-color:greenyellow;
+    color: blue;
+    height: auto;
+    position: absolute;
+
+    
+    
+
+    
+}

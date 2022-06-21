@@ -10,7 +10,7 @@ import counter from './reducers';
 // que es responsable de la actualización del store , junto
 //con cualquier estado inicial con el que queramos que
 //empiece el store (que en este caso es ninguno).
-const store = createStore(counter);
+const store = createStore(contador);
 
 // Aquí, envolvemos nuestro componente principal React dentro de las etiquetas del Provider,
 // que vienen del paquete react-redux.

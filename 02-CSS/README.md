@@ -142,14 +142,14 @@ body {
 
 El resultado obtenido sería el siguiente:
 
-<div style="text-align:center"><img src="/_src/assets/02-CSS/css-media-query.gif" alt="imagen"/></div>
+<div style="text-align:center"><img src="../_src/assets/02-CSS/css-media-query.gif" alt="imagen"/></div>
 
 
 ##### Bootrstap
 
 Supongamos ahora que queremos cambiar la cantidad de columnas que se muestren en función de la pantalla para que nos queden cuatro columnas en pantallas grandes, dos en medianas y una en pequeñas:
 
-<div style="text-align:center"><img alt="no-box"src="/_src/assets/02-CSS/esquema-col.png" alt="imagen"/></div>
+<div style="text-align:center"><img alt="no-box"src="../_src/assets/02-CSS/esquema-col.png" alt="imagen"/></div>
 <br>
 
 Podríamos realizarlo con CSS Media Queries similar al ejemplo anterior. Así que si quieren pueden intentarlo (Es un buen ejercicio para practicar lo que ya saben de CSS con esta nueva herramienta).
@@ -168,14 +168,14 @@ Bootstrap ya tiene integrado un sistema de grillas implementado a partir de flex
 
 El sistema de grilla de Bootstrap permite colocar hasta una suma de 12 'espacios' por fila distribuyéndolos de la forma que se quiera, ya sea colocando 12 columnas de 1 'espacio', 2 columnas de 6 'espacios' o cualquier variante de combinaciones:
 
- <div style="text-align:center"><img alt="no-box" src="/_src/assets/02-CSS/bootstrap-col-grid.png" alt="imagen"/></div>
+ <div style="text-align:center"><img alt="no-box" src="../_src/assets/02-CSS/bootstrap-col-grid.png" alt="imagen"/></div>
  <br>
 
 *También existe la opción de dejar que Bootrstap identifique la cantidad de columnas que hay y a partir de ello le asigne el mismo ancho a cada una hasta completar la totalidad de la fila (Siempre recordando que el máximo es de 12). Para ello se utiliza simplemente la clase `.col` en cada columna*
 
 Utilizando simplemente esas clases podemos crear múltiples tipos de grillas que se adapten a nuestras pantallas.
 
-<div style="text-align:center"><img src="/_src/assets/02-CSS/bootstrap-grid.gif" alt="imagen"/></div>
+<div style="text-align:center"><img src="../_src/assets/02-CSS/bootstrap-grid.gif" alt="imagen"/></div>
 <br>
 
 *En el gif de arriba podemos ver como en función del ancho de la pantalla va cambiando la cantidad de columnas*
