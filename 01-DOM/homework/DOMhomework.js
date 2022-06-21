@@ -14,8 +14,9 @@ let toDoItems= [];
 /*const creditos = document.getElementById("createdBy"); //creamos una constante con el valor obtenido de getElementById.
 creditos.innerHTML+= " Moisés Lugo";*/
 
-const agregarAutor= document.querySelector("#createdBy").innerHTML+=" Moisés Lugo"
-
+let nombre="Moises"
+//const agregarAutor= document.querySelector("#createdBy").innerHTML+=nombre;
+document.querySelector("#createdBy").innerHTML+=nombre;
 
 /*
 const div = document.querySelector('#createdBy').innerHTML+=" Moises Lugo";
@@ -38,8 +39,12 @@ this.complete=false;
 completeToDo(){
   return this.complete=true;
 }
-
 }
+
+/* ToDo.prototype.completeToDO= function(){
+  this.complete=true  
+}
+*/
 
 
 // Agregar dos parámetros a la función 'buildToDo':
@@ -60,7 +65,7 @@ completeToDo(){
 //    8) Devolver la variable toDoShell
 
 
-function buildToDo(todo, index) {//"todo" sería un objeto de la clase constructora.
+/* function buildToDo(todo, index) {//"todo" sería un objeto de la clase constructora.
      // Tu código acá:
   
   let toDoShell= document.createElement("div");
@@ -68,10 +73,34 @@ function buildToDo(todo, index) {//"todo" sería un objeto de la clase construct
   let toDoText = document.createElement("span");
   toDoText.innerHTML=todo.description;
   toDoText.id=index;
-  if(todo.complete===true){toDoText.className="completeText"};
+  if(todo.complete){toDoText.className="completeText";//importante para cambio o tachado
   toDoShell.appendChild(toDoText);
-  return toDoShell; 
-  }
+     }
+  toDoText.addEventListener("click", compleToDo)
+  toDoShell.appendChild(toDoText);
+  return toDoShell;
+    } */
+    function buildToDo(todo, index) {
+      // Tu código acá:
+      let toDoShell= document.createElement('div')
+      toDoShell.setAttribute('class','toDoShell')
+      let toDoText= document.createElement('span')
+      toDoText.innerHTML=todo.description
+      toDoText.setAttribute('id',index)
+      if(todo.complete){
+        toDoText.setAttribute('class','completeText') // toDoText.className='completeText'
+      }
+      toDoText.addEventListener('click',completeToDo)
+      toDoShell.appendChild(toDoText)
+      return toDoShell
+    }
+
+  
+  
+  //se puede hacer lo siguiente:  toDoShell.setAttribute("class","toDoShell")...revisar
+  //alternativa toDoText.setAttribute("class","completeText")
+
+
 
 // La función 'buildToDos' debe crear un array de objetos toDo y devolverlo//ok
 // Recibirá como parámetro un array de objetos ToDo//ok
@@ -87,7 +116,6 @@ function buildToDos(toDos) {
   
 }
 
-
 // La función 'displayToDos' se va a encargar de que se vean los toDo's en pantalla
 //  1) Seleccionar el elemento cuyo id es 'toDoContainer' y almacenarlo en una variable denominada 'toDoContainer'//Listo
 //  2) Setear el innerHTML de 'toDoContainer' como un string vacio ("")//Listo
@@ -99,15 +127,13 @@ function buildToDos(toDos) {
 
 function displayToDos() {
   // Tu código acá:
-/*
+
   let toDoContainer = document.querySelector("#toDoContainer");
   toDoContainer.innerHTML="";
   //buildToDos(toDoItems);
   buildToDos(toDoItems).forEach(function(todo){
     toDoContainer.appendChild(todo)
   });
-*/
-  
   
   /*
   let toDoContainer = document.querySelector("#toDoContainer");
@@ -181,9 +207,9 @@ function completeToDo(event) {
   const index = event.target.id;//linea descomentada que se encarga de ejecutar varias funciones mencionadas arriba
   // Tu código acá:
   toDoItems[index].completeToDo();//Con bracket notation por ser una varable que pasaremos por parametro del constructor ToDo ejecutamos el metodo toDo
-  displayToDos();//Desplegamos la lista de toDo
-
+  displayToDos()
 }
+
 
 // Una vez que llegaste a este punto verificá que todos los tests pasen
 
@@ -202,6 +228,8 @@ function completeToDo(event) {
 
 
 // Acá debes insertar la llamada a 'displayToDos'
+
+
 displayToDos();
 
 
